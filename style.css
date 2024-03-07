@@ -1,0 +1,678 @@
+/*GOOGLE FONTS*/
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+/* AFECTA TODOS LOS ELEMENTOS */
+* {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+  scroll-padding-top: 2rem;
+  box-sizing: border-box;
+}
+
+/*Variables*/
+:root {
+  --container-color: #1a1e21;
+  --second-color: #122949;
+  --text-color: #172317;
+  --bg-color: #fff;
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+img {
+  width: 100%;
+}
+
+section {
+  padding: 3rem 0 2rem;
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+.container {
+  max-width: 1068px;
+  width: 100%;
+  margin: auto;
+}
+
+/* Estilos del encabezado */
+.header {
+  background-color: #fff;
+  padding: 20px 0;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0;
+}
+
+.navbar img {
+  width: 125px;
+  height: auto;
+}
+
+.logo a {
+  text-decoration: none;
+  color: #000;
+  font-weight: bold;
+  font-size: 24px;
+}
+
+.nav-links {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links li {
+  display: inline-block;
+  margin-right: 20px;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: #000;
+}
+
+/* Estilos del icono del carrito */
+.cart-icon img {
+  width: 30px;
+  height: auto;
+}
+
+/* Estilos de la sección de HOME */
+.home {
+  width: 100%;
+  height: 350px;
+  position: relative;
+  background-image: url("img-eco/meditacion.jpg"); /* Cambia 'hero-background.jpg' con tu imagen de fondo */
+  background-size: cover;
+  background-position: center;
+  color: #fefefe;
+  text-align: center;
+  justify-content: center;
+  padding: 100px 0;
+}
+
+/* Superposición semitransparente solo para la imagen de fondo */
+.home::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(
+    0,
+    0,
+    0,
+    0.5
+  ); /* Color de fondo semitransparente negro */
+  z-index: -1;
+}
+
+/* Ajuste del contenido dentro de la sección de héroe */
+.home-content {
+  position: relative; /* Restaura la posición relativa */
+}
+
+.home h1 {
+  font-size: 48px;
+  margin-bottom: 20px;
+}
+
+.home p {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+/* Estilos de las secciones */
+
+.productos,
+.contacto {
+  background-color: #fff;
+  color: #000;
+  padding: 15px;
+  text-align: center;
+  margin-top: 10px; /* Ajusta el margen superior para separar las secciones */
+  margin-bottom: 10px;
+}
+
+.info h2,
+.productos h2,
+.contacto h2 {
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+/*INICIO INFO*/
+
+.info p {
+  text-align: center;
+}
+
+.info-title {
+  text-align: center;
+}
+
+.info-text p {
+  margin: 20px;
+  text-align: justify;
+  align-items: start;
+}
+
+/*INICIO TABLON*/
+
+.tablon {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Tres columnas iguales */
+  gap: 20px; /* Espacio entre las columnas */
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-top: 70px;
+}
+
+.columna {
+  background-color: #f9f9f9; /* Color de fondo */
+  padding: 10px; /* Espaciado interno */
+  border-radius: 5px; /* Bordes redondeados */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra */
+  text-align: center;
+}
+
+.columna h2 {
+  font-size: 18px; /* Tamaño del título */
+  margin-bottom: 10px; /* Espaciado inferior */
+}
+
+.columna img {
+  width: 300px; /* Imagen al 100% del ancho de la columna */
+  height: 150px;
+  border-radius: 5px; /* Bordes redondeados */
+  margin-bottom: 10px; /* Espaciado inferior */
+}
+
+.columna p {
+  font-size: 14px; /* Tamaño del texto */
+  margin-bottom: 10px; /* Espaciado inferior */
+}
+
+.columna button {
+  background-color: var(--second-color); /* Color de fondo del botón */
+  color: #fff; /* Color del texto */
+  border: none; /* Sin borde */
+  padding: 10px 20px; /* Espaciado interno */
+  border-radius: 5px; /* Bordes redondeados */
+  cursor: pointer; /* Cambio de cursor */
+  transition: background-color 0.3s; /* Transición suave */
+}
+
+.columna button:hover {
+  background-color: #0056b3; /* Cambio de color al pasar el ratón */
+}
+
+/*FIN TABLON*/
+/*FIN INFO MEDITACIÓN*/
+
+/*INICIO PRODUCTOS*/
+/*Estilo sección productos*/
+
+.titulo-productos {
+  text-align: center;
+}
+
+.titulo-productos h2 {
+  font-size: 40px;
+}
+
+.titulo-productos p {
+  font-size: 16px;
+}
+
+.productos {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  background-color:aliceblue;
+}
+
+.productos-button {
+  grid-column: 2; /* Coloca el botón en la segunda columna */
+  background-color: #000;
+  color: #fff;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+  text-align: center;
+  font-size: 20px;
+  width: 30%;
+  margin-top: 40px !important;
+  margin: 0 auto;
+}
+
+.productos-button:hover {
+  background-color: #333;
+  cursor: pointer;
+}
+
+.producto {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  width: 30%;
+  align-items: center;
+  margin-bottom: 20px;
+  padding: 10px;
+  background-color: #ffffff;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.producto img {
+  justify-self: center; /* Centrar horizontalmente la imagen dentro de su celda */
+  align-self: center; /* Centrar verticalmente la imagen dentro de su celda */
+  width: 200px;
+  height: 200px;
+  border-radius: 5px;
+}
+
+.producto h3 {
+  margin-top: 10px;
+  font-size: 18px;
+}
+
+.producto p {
+  margin-top: 10px;
+  font-size: 14px;
+}
+
+.producto .boton-producto {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 0px;
+  text-align: center;
+  background: linear-gradient(180deg, #f7dfa5, #f0c14b) repeat scroll 0 0
+    transparent;
+  background-color: #f0c14b;
+  color: #fff;
+  border: none;
+  border-radius: 3px;
+  box-shadow: inset 0 1px 0 hsla(0, 0%, 100%, 0.4);
+}
+
+.boton-producto:hover {
+  background-color: #f7dfa5;
+}
+
+/*MEDITACIONES*/
+
+.meditaciones {
+  background-color:#ffffff;
+  padding: 50px 0;
+  text-align: center;
+  margin-bottom: 0!important;
+}
+
+.meditaciones-title {
+  font-size: 2em;
+  margin-bottom: 20px;
+}
+
+.meditaciones-description {
+  font-size: 1.2em;
+  margin-bottom: 30px;
+}
+
+
+/* Estilos para los videos */
+.video-container {
+  display: flex;
+  justify-content:center; /* Centrar horizontalmente el contenido */
+  margin-bottom: 30px;
+  overflow: hidden; /* Asegura que el contenido se recorte para mostrar solo el área dentro del contenedor */
+}
+
+.video{
+  border-radius: 10px; /* Agregar bordes redondos al contenedor */
+}
+
+
+/* Estilos para el botón */
+.meditaciones-btn {
+  padding: 10px 20px;
+  font-size: 1.2em;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.meditaciones-btn:hover {
+  background-color: #0056b3;
+}
+
+/*FIN MEDITACIONES*/
+
+/*BLOG*/
+
+/*Post Filter*/
+.post-filter {
+  display: flex;
+  justify-content: center;
+  column-gap: 1.5rem;
+  margin-top: 2rem !important;
+}
+
+.filter-item {
+  font-size: 0.9rem;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.active-filter {
+  background: var(--second-color);
+  color: var(--bg-color);
+  padding: 4px 10px;
+  border-radius: 4px;
+}
+
+/*POSTS BLOG - AFECTA A LA SECCIÓN BLOG (FUERA DE LOS POSTS)*/
+
+.blog {
+  background-color: #f9f9f9;
+  padding: 30px 0;
+}
+
+.blog h2 {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.blog-posts {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-gap: 40px;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+.tablon-post img {
+  height: 300px;
+  width: auto;
+}
+
+/*POSTS*/
+
+.post-box {
+  height: 600px;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-bottom: 5px;
+}
+
+.post-box h3 {
+  font-size: 24px;
+  margin-bottom: 0px;
+  text-align: center;
+}
+
+.post-box img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 0.5rem;
+}
+
+.category {
+  font-size: 0.9rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  color: #000;
+}
+
+.post-title {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #000;
+  /*Para que el titulo no sobrepase las 2 líneas*/
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.post-date {
+  display: flex;
+  font-size: 0.875rem;
+  text-transform: uppercase;
+  font-weight: 400;
+  margin-top: 4px;
+}
+
+.post-description {
+  font-size: 0.9rem;
+  line-height: 1.5rem;
+  margin: 5px 0 10px;
+  /*Para que la descripcion no sobrepase las 3 líneas*/
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/*PERFIL DEL POST*/
+.profile-container {
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
+  padding: 0;
+}
+
+.profile-img {
+  width: 50px; /* Ancho de la imagen */
+  height: 50px; /* Alto de la imagen */
+  border-radius: 50%; /* Hace que el borde sea totalmente circular */
+  border: 2px solid #000; /* Borde de 2px sólido y color negro */
+  overflow: hidden; /* Esto asegura que la imagen se ajuste al borde circular */
+  margin-right: 10px; /* Espacio entre la imagen y el nombre */
+}
+
+.profile-img img {
+  width: 100%; /* Ajusta la imagen al tamaño del contenedor circular */
+  height: auto; /* Permitir que la altura se ajuste automáticamente para mantener la proporción */
+  object-fit: cover; /* Ajusta la imagen dentro del contenedor sin recortarla */
+  object-position: top; /* Muestra la parte superior de la imagen */
+  border-radius: 50%; /* Hace que la imagen también tenga bordes redondeados */
+}
+
+.profile-name {
+  font-size: 14px; /* Tamaño de la fuente del nombre */
+}
+
+/*BUTTON POST*/
+
+.button-container {
+  display: flex;
+  justify-content: center; /* Centrar horizontalmente */
+  align-items: center; /* Centrar verticalmente */
+  height: 40px; /* Altura de ejemplo */
+  margin-top: 20px;
+}
+
+.post-btn {
+  background-color: #000;
+  color: #fff;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+  text-align: center;
+  font-size: 15px;
+  width: 50%;
+  height: auto;
+  margin: 0 auto;
+  padding: 10px 20px;
+}
+
+.post-btn:hover {
+  background-color: #fff;
+  color: #000;
+  cursor: pointer;
+}
+
+/*Insta*/
+.insta-container {
+  margin-top: 30px;
+  margin-left: 30px;
+  text-decoration: none;
+  margin-bottom: 30px;
+}
+
+/*FOOTER*/
+
+.footer {
+  width: 100%; /* Ancho del footer */
+  height: 100%;
+  margin: 0; /* Centrar el footer horizontalmente */
+  background-color: #333;
+  color: #fff;
+  padding: 0px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer-left {
+  display: flex;
+  margin-left: 25px;
+  margin-right: 20px;
+  margin-top: 30px;
+}
+
+.footer-right {
+  display: flex;
+}
+
+.footer-menu {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 20px; /* Espacio entre las columnas */
+  list-style: none;
+  padding: 15px;
+  margin: 0;
+  border-bottom: 2px solid white; /* Agrega un borde inferior a la primera lista */
+}
+
+.footer-menu li {
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+
+.footer-menu li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+#blog-link,
+#productos-link,
+#meditaciones-link {
+  border-bottom: 2px solid white; /* Agrega un borde inferior a cada enlace */
+}
+
+#blog-link:hover,
+#productos-link:hover,
+#meditaciones-link:hover {
+  text-decoration: none;
+  color: #ccc;
+}
+
+.footer-menu li a:hover {
+  text-decoration: underline;
+  color: #ccc;
+}
+
+.footer-right {
+  display: flex;
+  flex-direction: row; /* Cambiar la dirección de flexión a columnas */
+  flex-wrap: wrap; /* Permitir que los elementos se envuelvan en múltiples filas */
+  align-items: center; /* Alinear los elementos hacia la izquierda */
+  margin-left: 40px;
+}
+
+.footer-top {
+  color: #fff;
+  margin-bottom: 20px; /* Espacio entre el texto y los iconos */
+  font-size: 20px;
+  justify-content: center;
+  margin-left: 40px;
+}
+
+.footer-bottom {
+  display: flex; /* Asegurar que los iconos estén en una fila */
+}
+
+.icon {
+  position: relative;
+  width: 80px;
+  height: 80px;
+  margin: 20px;
+  border-radius: 50%;
+  transition: all 0.8s;
+}
+
+.icon:hover {
+  background-color: #e60073;
+  box-shadow: 0 0 20px #e60073;
+}
+
+.icon:hover:nth-child(2) {
+  background-color: #1877f2;
+  box-shadow: 0 0 20px #1877f2;
+}
+
+.icon:hover:nth-child(3) {
+  background-color: #f80909;
+  box-shadow: 0 0 20px #f80909;
+}
+
+.icon:hover:nth-child(4) {
+  background-color: #000000;
+  box-shadow: 0 0 20px #000000;
+}
+
+.icon i {
+  color: #f9f9f9;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 1.7rem;
+}
+
+svg circle {
+  stroke-dasharray: 150;
+  transition: all 0.8s ease-in-out;
+}
+
+.icon:hover circle {
+  stroke-dasharray: 220;
+}
