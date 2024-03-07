@@ -676,3 +676,130 @@ svg circle {
 .icon:hover circle {
   stroke-dasharray: 220;
 }
+
+
+/*FIN CÓDIGO CSS PARA WEB ESCRITORIO*/
+
+/* Estilos para dispositivos móviles */
+@media only screen and (max-width: 767px) {
+  /* Estilos para el header */
+  .navbar {
+    flex-direction: column;
+  }
+  .nav-links {
+    display: none;
+  }
+  .cart-icon {
+    margin-top: 20px;
+  }
+  .logo {
+    margin-bottom: 20px;
+  }
+
+  /* Estilos para la sección de info */
+  .info-title {
+    text-align: center;
+  }
+  .info-text p {
+    margin-bottom: 20px;
+  }
+
+  /* Estilos para la sección de productos */
+  .container-productos {
+    padding: 20px;
+  }
+  .producto {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .tablon {
+    grid-template-columns: 1fr; /* Una sola columna en dispositivos móviles */
+  }
+}
+
+
+/* Estilos para dispositivos iPad */
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  /* Estilos para el header */
+  .navbar {
+    flex-direction: row;
+  }
+  .nav-links {
+    display: flex;
+  }
+  .cart-icon {
+    margin-top: 0;
+  }
+  .logo {
+    margin-bottom: 0;
+  }
+
+  /* Estilos para la sección de info */
+  .info-title {
+    text-align: left;
+  }
+  .info-text p {
+    margin-bottom: 30px;
+  }
+
+  /* Estilos para la sección de productos */
+  .container-productos {
+    padding: 30px;
+  }
+  .producto {
+    width: calc(33.33% - 20px);
+    margin-right: 20px;
+    margin-bottom: 30px;
+  }
+  .producto:nth-child(3n) {
+    margin-right: 0;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  .tablon {
+    grid-template-columns: repeat(2, 1fr); /* Dos columnas en iPad */
+  }
+}
+
+.columna {
+  background-color: #f9f9f9; /* Color de fondo */
+  padding: 10px; /* Espaciado interno */
+  border-radius: 5px; /* Bordes redondeados */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra */
+  text-align: center;
+}
+
+.columna h2 {
+  font-size: 18px; /* Tamaño del título */
+  margin-bottom: 10px; /* Espaciado inferior */
+}
+
+.columna img {
+  max-width: 100%; /* Imagen al 100% del ancho de la columna */
+  height: auto;
+  border-radius: 5px; /* Bordes redondeados */
+  margin-bottom: 10px; /* Espaciado inferior */
+}
+
+.columna p {
+  font-size: 14px; /* Tamaño del texto */
+  margin-bottom: 10px; /* Espaciado inferior */
+}
+
+.columna button {
+  background-color: var(--second-color); /* Color de fondo del botón */
+  color: #fff; /* Color del texto */
+  border: none; /* Sin borde */
+  padding: 10px 20px; /* Espaciado interno */
+  border-radius: 5px; /* Bordes redondeados */
+  cursor: pointer; /* Cambio de cursor */
+  transition: background-color 0.3s; /* Transición suave */
+}
+
+.columna button:hover {
+  background-color: #0056b3; /* Cambio de color al pasar el ratón */
+}
