@@ -102,7 +102,11 @@ section {
   color: #fefefe;
   text-align: center;
   justify-content: center;
-  padding: 100px 0;
+  
+}
+
+.hom-subtitle{
+  font-size: 35px;
 }
 
 /* Superposición semitransparente solo para la imagen de fondo */
@@ -130,6 +134,7 @@ section {
 .home h1 {
   font-size: 48px;
   margin-bottom: 20px;
+  margin-top: 30px;
 }
 
 .home p {
@@ -680,21 +685,38 @@ svg circle {
 
 /*FIN CÓDIGO CSS PARA WEB ESCRITORIO*/
 
+/*MÓVILES*/
+
 /* Estilos para dispositivos móviles */
 @media only screen and (max-width: 767px) {
   /* Estilos para el header */
   .navbar {
     flex-direction: column;
+    align-items: center;
   }
   .nav-links {
-    display: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
+
+  .nav-links li {
+    margin-bottom: 10px;
+  }
+
   .cart-icon {
     margin-top: 20px;
   }
   .logo {
     margin-bottom: 20px;
   }
+
+  .home h1{
+    font-size: 35px;
+  }
+
+    
+
 
   /* Estilos para la sección de info */
   .info-title {
@@ -712,16 +734,43 @@ svg circle {
     width: 100%;
     margin-bottom: 20px;
   }
-}
 
-@media only screen and (max-width: 767px) {
   .tablon {
     grid-template-columns: 1fr; /* Una sola columna en dispositivos móviles */
   }
+
+  .footer {
+    flex-direction: column;
+  }
+
+  .footer-left {
+    order: 1; /* Cambia el orden de visualización */
+  }
+
+  .footer-right {
+    order: 2; /* Cambia el orden de visualización */
+    margin-top: 20px;
+  }
+
+  .footer-right {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer-right .footer-bottom {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+
+
 }
 
 
-/* Estilos para dispositivos iPad */
+
+/***IPAD***/
+/*** Estilos para dispositivos IPAD ***/
 @media only screen and (min-width: 768px) and (max-width: 1024px) {
   /* Estilos para el header */
   .navbar {
