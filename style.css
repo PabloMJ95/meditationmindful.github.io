@@ -846,3 +846,158 @@ svg circle {
 .columna button:hover {
   background-color: #0056b3; /* Cambio de color al pasar el ratón */
 }
+
+
+
+/***FIN IPAD***/
+
+
+/**ARTÍCULOS**/
+
+article{
+  display: grid;
+  grid-template-columns: 1fr 20%; /* Divide en dos columnas: 80% para el artículo y 20% para el aside */
+  gap: 20px; /* Espacio entre las columnas */
+}
+
+.container-articulo {
+  grid-column: 1 / span 1; /* El artículo ocupará desde la primera columna hasta el final */
+  margin: 10px;
+  background-color: #fff; /* Color de fondo para el contenedor principal */
+  border-radius: 10px; /* Bordes redondeados */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
+  margin: 0; /* Centrar el contenedor */
+  padding: 0 20px; /* Espacio de relleno a los lados del contenedor */
+}
+
+aside{
+  height: 400px;
+  background-color: var(--second-color);
+}
+
+
+article h1, article h2 {
+  text-align: center;
+  margin: 10px;
+  padding: 20px;
+}
+
+
+.container-articulo p{
+  padding: 20px!important;
+}
+
+.container-articulo img{
+  padding: 20px;
+}
+
+.article ul {
+  list-style-type: none;
+  padding: 0px;
+}
+
+.article ul li {
+  margin-bottom: 5px; /* Margen entre elementos de la lista */
+}
+
+
+.index-article {
+  justify-content: center; /* Centra horizontalmente */
+  align-items: center; /* Centra verticalmente */
+  padding-top: 20px;
+  padding-bottom: 20px;
+  
+
+}
+
+.index-article a{
+  text-decoration: none;
+  color: #333;
+  margin-left: 20px;
+  margin-bottom: 20px;
+}
+
+.index-article a:hover{
+  color: #ccc;
+  cursor: pointer;
+}
+
+
+
+.video-container-articulo {
+  display: flex;
+  justify-content: center; /* Centra horizontalmente */
+  align-items: center; /* Centra verticalmente */
+}
+
+/*ASIDE*/
+aside.relacionados {
+  grid-column: 2 / span 1; /* El aside ocupará desde la segunda columna hasta el final */
+  padding: 20px;
+  background-color: #f2f2f2; /* Color de fondo para el aside */
+  border-radius: 10px; /* Bordes redondeados */
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1); /* Sombra suave */
+  position: relative;
+  right: 0;
+
+}
+
+aside h3 {
+  margin-top: 0;
+}
+
+aside ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+aside ul li {
+  margin-bottom: 5px; /* Margen entre elementos de la lista */
+}
+
+aside ul li a {
+  text-decoration: none;
+  color: #333;
+}
+
+div.articulo {
+  flex: 1;
+  padding: 20px;
+}
+
+
+
+
+/**POSTPAGE MOVILES**/
+/* Consulta de medios para dispositivos móviles */
+@media (max-width: 768px) {
+
+  article {
+    display: block; /* Cambia a bloque para dispositivos móviles */
+  }
+
+  .container-articulo {
+    margin-bottom: 20px; /* Espacio entre el artículo y el aside */
+  }
+
+  aside.relacionados {
+    width: 100%; /* Ocupa todo el ancho */
+    margin-top: 20px; /* Espacio entre el artículo y el aside */
+  }
+
+  /* Ajustes para los elementos de la lista de enlaces */
+  .index-article {
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center; /* Centra verticalmente */
+    padding: 10px;
+  }
+
+  .index-article a {
+    margin: 5px; /* Espacio entre los enlaces */
+  }
+
+  /* Ajustes para el video en el artículo */
+  .video-container-articulo {
+    margin: 20px 0; /* Espacio entre el video y otros elementos */
+  }
+}
